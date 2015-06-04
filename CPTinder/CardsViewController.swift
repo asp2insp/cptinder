@@ -8,11 +8,12 @@
 
 import UIKit
 
-class CardsViewController: UIViewController {
+class CardsViewController: UIViewController, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
 
     @IBOutlet var cardView: DraggableImageView!
     
     var cardInitialCenter : CGPoint!
+    var isPresenting: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +32,11 @@ class CardsViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let controller = segue.destinationViewController as! ProfileViewController
+        controller.modalPresentationStyle = UIModalPresentationStyle.Custom
+        controller.transitioningDelegate = self
         controller.image = cardView.image
     }
+    
 
     @IBAction func didPan(sender: UIPanGestureRecognizer) {
         switch sender.state {
@@ -47,3 +51,57 @@ class CardsViewController: UIViewController {
     }
 }
 
+extension CardsViewController: UIViewControllerTransitioningDelegate {
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        isPresenting = true
+        return self
+    }
+    
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        isPresenting = false
+        return self
+    }
+    
+}
+
+
+extension CardsViewController: UIViewControllerAnimatedTransitioning {
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+        // The value here should be the duration of the animations scheduled in the animationTransition method
+        return 0.4
+    }
+    
+    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+        println("animating transition")
+        var containerView = transitionContext.containerView()
+        var cloneImageView = UIImageView(frame: cardView.frame)
+        cloneImageView.image = cardView.image
+        cloneImageView.center = cardView.center
+        cloneImageView.clipsToBounds = true
+
+        containerView.addSubview(cloneImageView)
+    
+        var toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        var fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+        
+        if (isPresenting) {
+            containerView.addSubview(toViewController.view)
+            toViewController.view.alpha = 0
+            UIView.animateWithDuration(0.4, animations: { () -> Void in
+                toViewController.view.alpha = 1
+                }) { (finished: Bool) -> Void in
+                    transitionContext.completeTransition(true)
+            }
+        } else {
+            UIView.animateWithDuration(0.4, animations: { () -> Void in
+                fromViewController.view.alpha = 0
+                }) { (finished: Bool) -> Void in
+                    transitionContext.completeTransition(true)
+                    fromViewController.view.removeFromSuperview()
+            }
+        }
+    }
+
+
+}
