@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		FE45EE6F1B1FE9EF00F39BF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45EE6E1B1FE9EF00F39BF8 /* AppDelegate.swift */; };
-		FE45EE711B1FE9EF00F39BF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45EE701B1FE9EF00F39BF8 /* ViewController.swift */; };
+		FE45EE711B1FE9EF00F39BF8 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45EE701B1FE9EF00F39BF8 /* CardsViewController.swift */; };
 		FE45EE741B1FE9EF00F39BF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE45EE721B1FE9EF00F39BF8 /* Main.storyboard */; };
 		FE45EE761B1FE9EF00F39BF8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE45EE751B1FE9EF00F39BF8 /* Images.xcassets */; };
 		FE45EE791B1FE9EF00F39BF8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE45EE771B1FE9EF00F39BF8 /* LaunchScreen.xib */; };
 		FE45EE851B1FE9EF00F39BF8 /* CPTinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45EE841B1FE9EF00F39BF8 /* CPTinderTests.swift */; };
+		FE45EE921B1FEA8800F39BF8 /* ryan.png in Resources */ = {isa = PBXBuildFile; fileRef = FE45EE8E1B1FEA8800F39BF8 /* ryan.png */; };
+		FE45EE931B1FEA8800F39BF8 /* nav_bar2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE45EE8F1B1FEA8800F39BF8 /* nav_bar2@2x.png */; };
+		FE45EE941B1FEA8800F39BF8 /* action_buttons@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE45EE901B1FEA8800F39BF8 /* action_buttons@2x.png */; };
+		FE45EE951B1FEA8800F39BF8 /* nav_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE45EE911B1FEA8800F39BF8 /* nav_bar@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +33,17 @@
 		FE45EE691B1FE9EF00F39BF8 /* CPTinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPTinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE45EE6D1B1FE9EF00F39BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE45EE6E1B1FE9EF00F39BF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE45EE701B1FE9EF00F39BF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE45EE701B1FE9EF00F39BF8 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		FE45EE731B1FE9EF00F39BF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE45EE751B1FE9EF00F39BF8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FE45EE781B1FE9EF00F39BF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		FE45EE7E1B1FE9EF00F39BF8 /* CPTinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CPTinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE45EE831B1FE9EF00F39BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE45EE841B1FE9EF00F39BF8 /* CPTinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPTinderTests.swift; sourceTree = "<group>"; };
+		FE45EE8E1B1FEA8800F39BF8 /* ryan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ryan.png; sourceTree = "<group>"; };
+		FE45EE8F1B1FEA8800F39BF8 /* nav_bar2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_bar2@2x.png"; sourceTree = "<group>"; };
+		FE45EE901B1FEA8800F39BF8 /* action_buttons@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "action_buttons@2x.png"; sourceTree = "<group>"; };
+		FE45EE911B1FEA8800F39BF8 /* nav_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_bar@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				FE45EE6E1B1FE9EF00F39BF8 /* AppDelegate.swift */,
-				FE45EE701B1FE9EF00F39BF8 /* ViewController.swift */,
+				FE45EE701B1FE9EF00F39BF8 /* CardsViewController.swift */,
 				FE45EE721B1FE9EF00F39BF8 /* Main.storyboard */,
 				FE45EE751B1FE9EF00F39BF8 /* Images.xcassets */,
 				FE45EE771B1FE9EF00F39BF8 /* LaunchScreen.xib */,
@@ -90,6 +98,10 @@
 		FE45EE6C1B1FE9EF00F39BF8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FE45EE8E1B1FEA8800F39BF8 /* ryan.png */,
+				FE45EE8F1B1FEA8800F39BF8 /* nav_bar2@2x.png */,
+				FE45EE901B1FEA8800F39BF8 /* action_buttons@2x.png */,
+				FE45EE911B1FEA8800F39BF8 /* nav_bar@2x.png */,
 				FE45EE6D1B1FE9EF00F39BF8 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -192,8 +204,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE45EE941B1FEA8800F39BF8 /* action_buttons@2x.png in Resources */,
 				FE45EE741B1FE9EF00F39BF8 /* Main.storyboard in Resources */,
+				FE45EE931B1FEA8800F39BF8 /* nav_bar2@2x.png in Resources */,
+				FE45EE921B1FEA8800F39BF8 /* ryan.png in Resources */,
 				FE45EE791B1FE9EF00F39BF8 /* LaunchScreen.xib in Resources */,
+				FE45EE951B1FEA8800F39BF8 /* nav_bar@2x.png in Resources */,
 				FE45EE761B1FE9EF00F39BF8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE45EE711B1FE9EF00F39BF8 /* ViewController.swift in Sources */,
+				FE45EE711B1FE9EF00F39BF8 /* CardsViewController.swift in Sources */,
 				FE45EE6F1B1FE9EF00F39BF8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +425,7 @@
 				FE45EE8A1B1FE9EF00F39BF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE45EE8B1B1FE9EF00F39BF8 /* Build configuration list for PBXNativeTarget "CPTinderTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +434,7 @@
 				FE45EE8D1B1FE9EF00F39BF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
