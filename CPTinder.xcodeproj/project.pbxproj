@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		169BD3BD1B1FED0300E53A72 /* DraggableImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169BD3BC1B1FED0300E53A72 /* DraggableImageView.xib */; };
+		169BD3BF1B1FED1F00E53A72 /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169BD3BE1B1FED1F00E53A72 /* DraggableImageView.swift */; };
 		FE45EE6F1B1FE9EF00F39BF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45EE6E1B1FE9EF00F39BF8 /* AppDelegate.swift */; };
 		FE45EE711B1FE9EF00F39BF8 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE45EE701B1FE9EF00F39BF8 /* CardsViewController.swift */; };
 		FE45EE741B1FE9EF00F39BF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE45EE721B1FE9EF00F39BF8 /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		169BD3BC1B1FED0300E53A72 /* DraggableImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DraggableImageView.xib; sourceTree = "<group>"; };
+		169BD3BE1B1FED1F00E53A72 /* DraggableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableImageView.swift; sourceTree = "<group>"; };
 		FE45EE691B1FE9EF00F39BF8 /* CPTinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CPTinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE45EE6D1B1FE9EF00F39BF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE45EE6E1B1FE9EF00F39BF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				FE45EE6E1B1FE9EF00F39BF8 /* AppDelegate.swift */,
 				FE45EE701B1FE9EF00F39BF8 /* CardsViewController.swift */,
 				FE45EE721B1FE9EF00F39BF8 /* Main.storyboard */,
+				169BD3BC1B1FED0300E53A72 /* DraggableImageView.xib */,
+				169BD3BE1B1FED1F00E53A72 /* DraggableImageView.swift */,
 				FE45EE751B1FE9EF00F39BF8 /* Images.xcassets */,
 				FE45EE771B1FE9EF00F39BF8 /* LaunchScreen.xib */,
 				FE45EE6C1B1FE9EF00F39BF8 /* Supporting Files */,
@@ -210,6 +216,7 @@
 				FE45EE921B1FEA8800F39BF8 /* ryan.png in Resources */,
 				FE45EE791B1FE9EF00F39BF8 /* LaunchScreen.xib in Resources */,
 				FE45EE951B1FEA8800F39BF8 /* nav_bar@2x.png in Resources */,
+				169BD3BD1B1FED0300E53A72 /* DraggableImageView.xib in Resources */,
 				FE45EE761B1FE9EF00F39BF8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE45EE711B1FE9EF00F39BF8 /* CardsViewController.swift in Sources */,
+				169BD3BF1B1FED1F00E53A72 /* DraggableImageView.swift in Sources */,
 				FE45EE6F1B1FE9EF00F39BF8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

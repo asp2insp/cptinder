@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -29,52 +29,30 @@
                                     <constraint firstAttribute="height" constant="108" id="zoI-Qa-Aov"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryan.png" translatesAutoresizingMaskIntoConstraints="NO" id="PvG-Ra-nv5">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <gestureRecognizers/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHa-EH-lq5" customClass="DraggableImageView" customModule="CPTinder" customModuleProvider="target">
+                                <rect key="frame" x="16" y="81" width="568" height="395"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="9TX-e6-kda" appends="YES" id="nhZ-hb-16k"/>
+                                    <outletCollection property="gestureRecognizers" destination="9TX-e6-kda" appends="YES" id="O07-9O-nwH"/>
                                 </connections>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="m8M-Xe-wvd" secondAttribute="trailing" id="3Ob-0e-3zD"/>
-                            <constraint firstItem="PvG-Ra-nv5" firstAttribute="top" secondItem="m8M-Xe-wvd" secondAttribute="bottom" constant="16" id="5uq-wl-veu"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="J7p-Wi-XNb" secondAttribute="bottom" id="9ji-sV-RLN"/>
                             <constraint firstAttribute="trailing" secondItem="J7p-Wi-XNb" secondAttribute="trailing" id="9vy-CB-X3z"/>
                             <constraint firstItem="J7p-Wi-XNb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PH4-52-354"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PvG-Ra-nv5" secondAttribute="trailing" id="ZUb-Nu-oct"/>
+                            <constraint firstItem="JHa-EH-lq5" firstAttribute="top" secondItem="m8M-Xe-wvd" secondAttribute="bottom" constant="16" id="aSE-Kj-aIk"/>
+                            <constraint firstItem="JHa-EH-lq5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="emk-Au-WfN"/>
                             <constraint firstItem="m8M-Xe-wvd" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="h4D-Pw-SpD"/>
-                            <constraint firstItem="J7p-Wi-XNb" firstAttribute="top" secondItem="PvG-Ra-nv5" secondAttribute="bottom" constant="16" id="iDd-Mg-3XY"/>
                             <constraint firstItem="m8M-Xe-wvd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="iSL-IN-BXB"/>
-                            <constraint firstItem="PvG-Ra-nv5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="iWq-w5-Ir4"/>
+                            <constraint firstItem="J7p-Wi-XNb" firstAttribute="top" secondItem="JHa-EH-lq5" secondAttribute="bottom" constant="16" id="msI-a5-Uzb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JHa-EH-lq5" secondAttribute="trailing" id="riM-M5-2JJ"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="PvG-Ra-nv5"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="5uq-wl-veu"/>
-                                <exclude reference="ZUb-Nu-oct"/>
-                                <exclude reference="iWq-w5-Ir4"/>
-                                <exclude reference="iDd-Mg-3XY"/>
-                            </mask>
-                        </variation>
-                        <variation key="widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="PvG-Ra-nv5"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="5uq-wl-veu"/>
-                                <include reference="ZUb-Nu-oct"/>
-                                <include reference="iWq-w5-Ir4"/>
-                                <include reference="iDd-Mg-3XY"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
-                        <outlet property="cardView" destination="PvG-Ra-nv5" id="cqL-gh-DQi"/>
+                        <outlet property="cardView" destination="JHa-EH-lq5" id="jRI-l9-DoG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -89,6 +67,5 @@
     <resources>
         <image name="action_buttons.png" width="320" height="108"/>
         <image name="nav_bar.png" width="320" height="65"/>
-        <image name="ryan.png" width="449" height="514"/>
     </resources>
 </document>

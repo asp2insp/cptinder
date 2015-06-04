@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DraggableImageView" customModule="CPTinder" customModuleProvider="target">
+            <connections>
+                <outlet property="draggableImageView" destination="z7a-l7-oax" id="N8F-w1-y9P"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z7a-l7-oax">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="z7a-l7-oax" secondAttribute="trailing" id="A42-Rl-QcD"/>
+                <constraint firstItem="z7a-l7-oax" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Bti-9C-nI1"/>
+                <constraint firstAttribute="bottom" secondItem="z7a-l7-oax" secondAttribute="bottom" id="BwD-NK-PYY"/>
+                <constraint firstItem="z7a-l7-oax" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cxU-Wo-bq4"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

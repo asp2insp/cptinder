@@ -9,11 +9,14 @@
 import UIKit
 
 class CardsViewController: UIViewController {
-    @IBOutlet weak var cardView: UIImageView!
+
+    @IBOutlet var cardView: DraggableImageView!
+    
     var cardInitialCenter : CGPoint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        cardView.image = UIImage(named: "ryan")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
