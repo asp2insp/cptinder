@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -29,11 +30,13 @@
                                     <constraint firstAttribute="height" constant="108" id="zoI-Qa-Aov"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHa-EH-lq5" customClass="DraggableImageView" customModule="CPTinder" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHa-EH-lq5" customClass="DraggableImageView" customModule="CPTinder" customModuleProvider="target">
                                 <rect key="frame" x="16" y="81" width="568" height="395"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="9TX-e6-kda" appends="YES" id="O07-9O-nwH"/>
+                                    <outletCollection property="gestureRecognizers" destination="05Z-UM-KWw" appends="YES" id="udR-mh-kTa"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -44,15 +47,20 @@
                             <constraint firstAttribute="trailing" secondItem="J7p-Wi-XNb" secondAttribute="trailing" id="9vy-CB-X3z"/>
                             <constraint firstItem="J7p-Wi-XNb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="PH4-52-354"/>
                             <constraint firstItem="JHa-EH-lq5" firstAttribute="top" secondItem="m8M-Xe-wvd" secondAttribute="bottom" constant="16" id="aSE-Kj-aIk"/>
-                            <constraint firstItem="JHa-EH-lq5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="emk-Au-WfN"/>
+                            <constraint firstItem="JHa-EH-lq5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="emk-Au-WfN">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="m8M-Xe-wvd" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="h4D-Pw-SpD"/>
                             <constraint firstItem="m8M-Xe-wvd" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="iSL-IN-BXB"/>
                             <constraint firstItem="J7p-Wi-XNb" firstAttribute="top" secondItem="JHa-EH-lq5" secondAttribute="bottom" constant="16" id="msI-a5-Uzb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JHa-EH-lq5" secondAttribute="trailing" id="riM-M5-2JJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JHa-EH-lq5" secondAttribute="trailing" id="riM-M5-2JJ">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cardView" destination="JHa-EH-lq5" id="jRI-l9-DoG"/>
+                        <segue destination="6Jb-6i-u5t" kind="presentation" identifier="show_profile" id="WnY-CR-X0q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -61,11 +69,112 @@
                         <action selector="didPan:" destination="vXZ-lx-hvc" id="KOc-VF-hoa"/>
                     </connections>
                 </panGestureRecognizer>
+                <tapGestureRecognizer id="05Z-UM-KWw">
+                    <connections>
+                        <action selector="didTapImage:" destination="vXZ-lx-hvc" id="LE9-Sc-ZIg"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="qX9-lV-xhu">
+            <objects>
+                <viewController id="6Jb-6i-u5t" customClass="ProfileViewController" customModule="CPTinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9U8-b9-pbZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="iqh-1K-Td0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OvI-pY-yg2">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="buE-8z-uNR">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="buE-8z-uNR" secondAttribute="height" multiplier="1:1" id="50x-m6-xho"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="50x-m6-xho"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="50x-m6-xho"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nav_bar2.png" translatesAutoresizingMaskIntoConstraints="NO" id="HC4-vI-8Wc">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="9mb-SJ-Y9g"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9mb-SJ-Y9g"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="9mb-SJ-Y9g"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="buE-8z-uNR" firstAttribute="leading" secondItem="OvI-pY-yg2" secondAttribute="leading" id="2Pt-G9-2ZS"/>
+                            <constraint firstAttribute="trailing" secondItem="HC4-vI-8Wc" secondAttribute="trailing" id="A0g-Ed-hmr"/>
+                            <constraint firstItem="HC4-vI-8Wc" firstAttribute="top" secondItem="OvI-pY-yg2" secondAttribute="top" id="Hgz-k1-aO6"/>
+                            <constraint firstItem="buE-8z-uNR" firstAttribute="top" secondItem="OvI-pY-yg2" secondAttribute="top" id="bFw-rc-949"/>
+                            <constraint firstAttribute="trailing" secondItem="buE-8z-uNR" secondAttribute="trailing" id="cMe-Cn-qOa"/>
+                            <constraint firstItem="buE-8z-uNR" firstAttribute="top" secondItem="HC4-vI-8Wc" secondAttribute="bottom" constant="-65" id="hhh-31-l7r">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="HC4-vI-8Wc" firstAttribute="leading" secondItem="OvI-pY-yg2" secondAttribute="leading" id="jHv-5k-yOD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="buE-8z-uNR"/>
+                                <exclude reference="HC4-vI-8Wc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="A0g-Ed-hmr"/>
+                                <exclude reference="Hgz-k1-aO6"/>
+                                <exclude reference="jHv-5k-yOD"/>
+                                <exclude reference="2Pt-G9-2ZS"/>
+                                <exclude reference="bFw-rc-949"/>
+                                <exclude reference="cMe-Cn-qOa"/>
+                                <exclude reference="hhh-31-l7r"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="buE-8z-uNR"/>
+                                <include reference="HC4-vI-8Wc"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="A0g-Ed-hmr"/>
+                                <include reference="Hgz-k1-aO6"/>
+                                <include reference="jHv-5k-yOD"/>
+                                <include reference="2Pt-G9-2ZS"/>
+                                <exclude reference="bFw-rc-949"/>
+                                <include reference="cMe-Cn-qOa"/>
+                                <include reference="hhh-31-l7r"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="profileImage" destination="buE-8z-uNR" id="Kgy-xs-flb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zSf-s9-8Ar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934.5" y="339"/>
         </scene>
     </scenes>
     <resources>
         <image name="action_buttons.png" width="320" height="108"/>
         <image name="nav_bar.png" width="320" height="65"/>
+        <image name="nav_bar2.png" width="320" height="65"/>
     </resources>
 </document>

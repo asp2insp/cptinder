@@ -32,11 +32,9 @@ class DraggableImageView: UIView {
         // standard initialization logic
         let nib = UINib(nibName: "DraggableImageView", bundle: nil)
         nib.instantiateWithOwner(self, options: nil)
-        draggableImageView.frame = bounds
+        draggableImageView.frame = self.bounds
         addSubview(draggableImageView)
         draggableImageView.layer.cornerRadius = 20
-
-        
         
     }
 }

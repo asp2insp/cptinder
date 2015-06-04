@@ -25,6 +25,14 @@ class CardsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func didTapImage(sender: UITapGestureRecognizer) {
+        self.performSegueWithIdentifier("show_profile", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let controller = segue.destinationViewController as! ProfileViewController
+        controller.image = cardView.image
+    }
 
     @IBAction func didPan(sender: UIPanGestureRecognizer) {
         switch sender.state {
